@@ -2,7 +2,6 @@
 
 ## How to run the code :
 
-
 1. Clone this repository :
 ```ini
 git clone https://github.com/Louai-AZ/Medical_ChatBot.git
@@ -13,10 +12,12 @@ git clone https://github.com/Louai-AZ/Medical_ChatBot.git
 conda create -n medchatEnv python=3.8 -y ;
 conda activate medchatEnv ;
 ```
+
 3. Install the dependencies : 
 ```ini
 pip install -r requirements.txt
 ```
+
 4. Create a `.env` file in the root directory and add your Pinecone credentials as follows :
 
 ```ini
