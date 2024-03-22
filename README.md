@@ -43,7 +43,7 @@ python app.py
 
 
 
-## Techstack Used:
+## TechStack Used:
 
 - Python
 - LangChain
