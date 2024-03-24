@@ -18,6 +18,7 @@ PINECONE_API_KEY = os.environ.get('PINECONE_API_KEY')
 PINECONE_API_ENV = os.environ.get('PINECONE_API_ENV')
 index_name = os.environ.get('index_name')
 embeddings = download_hugging_face_embeddings()
+
 pinecone.init(api_key=PINECONE_API_KEY,
             environment=PINECONE_API_ENV)
 docsearch=Pinecone.from_existing_index(index_name, embeddings)
@@ -43,14 +44,12 @@ def index():
     return render_template('chat.html')
 
 
-
 @app.route("/get", methods=["GET", "POST"])
 def chat():
     msg = request.form["msg"]
     input = msg
     result=qa({"query": input})
     return str(result["result"])
-
 
 
 if __name__ == '__main__':
